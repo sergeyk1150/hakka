@@ -1,0 +1,87 @@
+.clicks-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(27, 26, 26, 0.95);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out;
+    user-select: none;
+}
+
+.clicks-overlay .finish-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    z-index: 1002;
+}
+
+.clicks-overlay .finish-button:hover {
+    background-color: #e60000;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-out {
+    animation: fadeOut 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.clicks-overlay h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.clicks-overlay .countdown,
+.clicks-overlay .click-count,
+.clicks-overlay .status {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.clicks-overlay .clear-button {
+    margin-top: 30px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #343434;
+    color: #eee;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in;
+}
+
+.clicks-overlay .clear-button:hover {
+    background-color: #555555;
+}
